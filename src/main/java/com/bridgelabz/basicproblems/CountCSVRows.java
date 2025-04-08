@@ -16,7 +16,7 @@ public class CountCSVRows {
                 }
                 rowCount++;
             }
-            System.out.println("Total records (excluding header): " + rowCount);
+            System.out.println("Total records : " + rowCount);
         } catch (IOException e) {
             e.printStackTrace();
         }
