@@ -19,17 +19,11 @@ public class ValidateCSV {
                 String[] data = line.split(",");
                 String email = data[2].trim();
                 String phone = data[3].trim();
-                boolean valid = true;
                 if (!emailPattern.matcher(email).matches()) {
                     System.out.println("Invalid email in row: " + line);
-                    valid = false;
                 }
                 if (!phonePattern.matcher(phone).matches()) {
                     System.out.println("Invalid phone number in row: " + line);
-                    valid = false;
-                }
-                if (!valid) {
-                    System.out.println(" Invalid row.\n");
                 }
             }
         } catch (IOException e) {
